@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mango Music</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN POPUP -->
+<div class="login-popup" id="loginPopup">
+  <div class="login-box">
+
+    <h2>Welcome to Mango Music 🎧</h2>
+    <p>Discover music your way</p>
+
+    <button onclick="login()">Login with Google</button>
+    <button onclick="guestLogin()">Continue as Guest</button>
+
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+  <!-- LOGO -->
+ <div class="logo-container">
+  <img src="assets/images/logo.png" alt="Logo" onclick="goHomePage()">
+</div>
+
+
+
+  <!-- NAV LINKS -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="reels.html">Reels</a>
+    <a href="game.html">Game</a>
+    <a href="about.html">About</a>
+  </nav>
+  <div class="menu-icon" onclick="toggleMenu()">
+  ☰
+</div>
+  <!-- AUTH -->
+  <div class="auth-buttons" id="authSection"></div>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h2>Experience Telugu Music Like Never Before</h2>
+    <p>Discover trending songs, reels & hidden gems</p>
+    <button onclick="window.open('https://www.instagram.com/mangomusiclabel/', '_blank')">
+  Explore Reels
+</button>
+  </div>
+</section>
+  <!-- SEARCH -->
+  <div class="search-container">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search songs..." onkeyup="searchSongs()">
+      <span class="search-icon">🔍</span>
+    </div>
+  </div>
+<!-- VIDEOS -->
+<section class="videos">
+
+  <h2>Explore Music 🎬</h2>
+
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('all', this)">All Videos</button>
+    <button class="tab" onclick="showTab('trending', this)">Trending</button>
+    <button class="tab" onclick="showTab('popular', this)">Most Watched</button>
+  </div>
+
+  <!-- ALL -->
+  <div class="cards tab-content" id="all">
+
+    <div class="card" data-name="Yamuna Thatilo"
+     onclick="openVideo('https://www.youtube.com/watch?v=Xg36nIVijU4&list=RDXg36nIVijU4&start_radio=1')">
+      <img src="assets/images/song1.jpg">
+      <h3>Yamuna Thatilo</h3>
+      <p>Sri Ramuni Charitamunu</p>
+    </div>
+
+    <div class="card" data-name="Nee Prashnalu"
+      onclick="openVideo('https://www.youtube.com/watch?v=9RbQwW1B9AI&list=RD9RbQwW1B9AI&start_radio=1')">
+      <img src="assets/images/song2.jpg">
+      <h3>Nee Prashnalu</h3>
+      <p>Kotha Bangaru Lokam</p>
+    </div>
+
+    <div class="card" data-name="Kammani Ee Premalekha"
+      onclick="openVideo('https://www.youtube.com/watch?v=0hq3DrAJY_c&list=RD0hq3DrAJY_c&start_radio=1')">
+      <img src="assets/images/song3.jpg">
+      <h3>Kammani Ee Premalekha</h3>
+      <p>Guna</p>
+    </div>
+
+    <div class="view-more">View More →</div>
+  </div>
+
+  <!-- TRENDING -->
+  <div class="cards tab-content hidden" id="trending">
+
+    <div class="card" data-name="samajavaragamana">
+      <img src="assets/images/song2.jpg">
+      <h3>Samajavaragamana</h3>
+      <p>Trending Now 🔥</p>
+    </div>
+
+    <div class="card" data-name="Yamuna Thatilo">
+      <img src="assets/images/song1.jpg">
+      <h3>Yamuna Thatilo</h3>
+      <p>Popular Hit</p>
+    </div>
+
+    <div class="view-more">View More →</div>
+  </div>
+
+  <!-- POPULAR -->
+  <div class="cards tab-content hidden" id="popular">
+
+    <div class="card" data-name="srivalli">
+      <img src="assets/images/song3.jpg">
+      <h3>Srivalli</h3>
+      <p>Most Loved Song</p>
+    </div>
+
+    <div class="card" data-name="Yamuna Thatilo">
+      <img src="assets/images/song1.jpg">
+      <h3>Yamuna Thatilo</h3>
+      <p>Top Played</p>
+    </div>
+
+    <div class="view-more">View More →</div>
+  </div>
+
+</section>
+
+<!-- MOOD -->
+<section class="mood-section">
+  <h2 class="section-title">Find Music By Mood 🎧</h2>
+
+  <div class="mood-grid">
+  <button class="mood-btn" onclick="selectMood(this, 'Love')">Love ❤️</button>
+  <button class="mood-btn" onclick="selectMood(this, 'Sad')">Sad 😢</button>
+  <button class="mood-btn" onclick="selectMood(this, 'Party')">Party 🎉</button>
+  <button class="mood-btn" onclick="selectMood(this, 'Chill')">Chill 🌙</button>
+  <button class="mood-btn" onclick="selectMood(this, 'Motivation')">Motivation 💪</button>
+  <button class="mood-btn" onclick="selectMood(this, 'Romantic')">Romantic 💕</button>
+  <button class="mood-btn" onclick="selectMood(this, 'Devotional')">Devotional 🙏</button>
+</div>
+
+<!-- 🎬 PLAYER (ADD BELOW mood-actions) -->
+<div id="playerSection" class="hidden">
+  <button onclick="closePlayer()" class="close-btn">✖</button>
+  <a id="ytFallback" target="_blank">Watch on YouTube</a>
+  <iframe id="ytPlayer"
+    width="560"
+    height="315"
+    src=""
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!-- ✅ ADD THIS BELOW mood-grid -->
+<div class="mood-actions">
+  <button id="youtubeBtn" disabled onclick="openMoodYouTube()">🎬 Watch on YouTube</button>
+  <button id="audioBtnMood" disabled onclick="playMoodAudio()">🎧 Quick Play</button>
+</div>
+</section>
+
+<!-- GAME -->
+<section class="game">
+  <h2>🎮 Guess The Song</h2>
+  <p>Test your music knowledge and challenge yourself</p>
+  <button class="game-btn" onclick="goToGame()">Start Playing</button>
+  <button class="tournament-btn" onclick="goToTournament()">Participate in Tournament</button>
+</button>
+</section>
+ <script src="script.js"></script>
+
+<!-- SIDE MENU -->
+<div id="sideMenu" class="side-menu">
+
+  <div class="close-btn" onclick="toggleMenu()">✖</div>
+
+  <a href="#">Dashboard</a>
+  <a href="#">Mango Rising</a>
+  <a href="#">Social Media</a>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <p>© Mango Music</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

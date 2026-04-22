@@ -1,0 +1,153 @@
+<link rel="stylesheet" href="style.css">
+<body onload="showHome()"></body>
+<section class="game">
+
+  <h2>🎮 Music Quiz</h2>
+  <p id="stepText">Select category to start</p>
+ 
+  <!-- ========================= -->
+  <!-- ✅ STEP 1: CATEGORY -->
+  <!-- ========================= -->
+  <div id="categorySection">
+
+    <div class="category-grid">
+
+      <div class="cat-card" onclick="selectCategory('singer', this)">
+        <img src="assets/images/singer.jpg">
+        <p>Singer</p>
+      </div>
+
+      <div class="cat-card" onclick="selectCategory('heroes', this)">
+        <img src="assets/images/heros.jpg">
+        <p>Heroes</p>
+      </div>
+
+      <div class="cat-card" onclick="selectCategory('actress', this)">
+        <img src="assets/images/actress.jpg">
+        <p>Actress</p>
+      </div>
+
+      <div class="cat-card" onclick="selectCategory('composer', this)">
+        <img src="assets/images/composer.jpg">
+        <p>Music Director</p>
+      </div>
+
+      <div class="cat-card" onclick="selectCategory('lyricist', this)">
+        <img src="assets/images/lyricist.jpg">
+        <p>Lyricist</p>
+      </div>
+
+      <div class="cat-card" onclick="selectCategory('album', this)">
+        <img src="assets/images/album.jpg">
+        <p>Album</p>
+      </div>
+
+    </div>
+
+    <!-- NEXT BUTTON -->
+    <div class="next-container">
+      <button class="next-btn" onclick="goNext()" disabled>Next →</button>
+    </div>
+
+  </div>
+
+  <!-- ========================= -->
+  <!-- ✅ STEP 2: PERSON -->
+  <!-- ========================= -->
+  <div id="personSection" class="hidden">
+
+    <h2 id="personTitle">Choose</h2>
+
+    <input 
+      type="text" 
+      id="personSearch" 
+      placeholder="Search..." 
+      onkeyup="filterPersons()"
+    >
+
+    <div id="personList" class="person-grid"></div>
+
+    <!-- BACK + NEXT -->
+    <div class="person-actions">
+      <button class="back-btn" onclick="goBack()">← Back</button>
+      <button class="next-btn" onclick="startQuizFromPerson()" disabled>Next →</button>
+    </div>
+
+  </div>
+
+  <!-- ========================= -->
+  <!-- ✅ STEP 3: QUIZ -->
+  <!-- ========================= -->
+   <div class="quiz-header">
+  <img id="quizPersonImg">
+  <p id="timer">Time: 00:00</p>
+</div>
+<div id="quizArea" class="hidden">
+
+  <h3 id="question"></h3>
+
+  <button id="playBtn">▶ Play Audio</button>
+
+  <div id="options"></div>
+<p id="errorMsg" style="color:red;"></p>
+  <!-- ✅ ADD HERE ONLY -->
+  <div class="quiz-controls">
+    
+    <button onclick="nextQuestion()">Next →</button>
+  </div>
+
+</div>
+
+  <!-- ========================= -->
+  <!-- ✅ STEP 4: RESULT -->
+  <!-- ========================= -->
+  <div id="finalResult" class="hidden"></div>
+
+</section>
+<!-- ✅ SCRIPT MUST BE AT END -->
+ <div id="resultBox" class="hidden result-box">
+  <canvas id="confetti"></canvas>
+
+  <div class="result-content">
+    <img id="resultImg">
+    <h2 id="resultName"></h2>
+
+    <h1>🎉 Congratulations!</h1>
+    <p>Quiz Completed</p>
+
+    <h3 id="resultScore"></h3>
+    <p id="resultTime"></p>
+    <p id="resultQuote"></p>
+     <p class="home-link" onclick="goHome()">← Go back to Categories</p>
+  </div>
+</div>
+
+<div id="tournamentSection" style="display:none;">
+
+  <h2>🔥 Weekly Tournament</h2>
+
+  <div id="heroSelect" class="hero-select">
+
+    <div class="hero-card" onclick="selectHero('allu')">
+      <img src="assets/images/hero1.jpg">
+      <p>Allu Arjun</p>
+    </div>
+
+    <div class="vs-text">VS</div>
+
+    <div class="hero-card" onclick="selectHero('nani')">
+      <img src="assets/images/hero2.jpg">
+      <p>Nani</p>
+    </div>
+
+  </div>
+
+  <div id="tournamentQuiz" style="display:none;">
+    <h3 id="tQuestion"></h3>
+    <div id="tOptions"></div>
+    <p id="tTimer">Time: 30</p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>

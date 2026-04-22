@@ -1,0 +1,2012 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0b0b0b;
+  color: #ffffff;
+}
+.game p {
+  margin-bottom: 20px;
+}
+
+#playBtn {
+  margin-bottom: 25px;
+}
+ .category {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.person-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.person {
+  text-align: center;
+  cursor: pointer;
+}
+
+.person img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+
+  object-fit: cover;
+  object-position: top; /* 🔥 KEY FIX */
+
+  border: 3px solid gold;
+}
+
+.person p {
+  margin-top: 5px;
+}
+
+#options button {
+  display: block;
+  margin: 10px auto;
+  width: 250px;
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* CATEGORY GRID */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+/* CATEGORY CARD (BUTTON STYLE) */
+/* ===== CATEGORY GRID ===== */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+/* ===== CATEGORY CARD ===== */
+.cat-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 16px;
+  cursor: pointer;
+  border: 1px solid #222;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* IMAGE */
+.cat-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* TEXT */
+.cat-card p {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+/* HOVER */
+.cat-card:hover {
+  transform: scale(1.05);
+  border: 1px solid #ffb400;
+}
+.cat-card img {
+  pointer-events: none;
+}
+/* PERSON GRID */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 500px;
+  margin: 25px auto;
+}
+
+/* PERSON CARD */
+.person {
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* IMAGE */
+.person img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+/* NAME */
+.person p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* HOVER */
+.person:hover img {
+  transform: scale(1.1);
+}
+
+/* ACTIVE (SELECTED) */
+.person.active img {
+  border: 3px solid #ffb703;
+  box-shadow: 0 0 15px #ffb703;
+  transform: scale(1.1);
+}
+/* NEXT BUTTON CONTAINER */
+.next-container {
+  display: flex;
+  justify-content: center; /* center alignment */
+  margin-top: 30px;
+}
+
+/* NEXT BUTTON */
+.next-btn {
+  background: #ffb703;
+  color: black;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* DISABLED STYLE (important fix) */
+.next-btn:disabled {
+  background: #ffb703; /* keep yellow */
+  opacity: 0.5;        /* slightly faded */
+  cursor: not-allowed;
+}
+
+/* HOVER */
+/* ONLY ACTIVE BUTTON CAN HOVER */
+.next-btn.active {
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: 0 0 15px #ffb703;
+}
+
+.next-btn.active:hover {
+  transform: scale(1.05);
+}
+/* PERSON SECTION */
+#personSection {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* SEARCH BOX */
+#personSearch {
+  padding: 10px;
+  width: 250px;
+  border-radius: 20px;
+  border: none;
+  margin: 15px 0;
+}
+
+/* GRID */
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 500px;
+  margin: auto;
+}
+
+/* PERSON */
+.person {
+  cursor: pointer;
+  text-align: center;
+}
+
+/* IMAGE */
+.person img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ACTIVE */
+.person.active img {
+  border: 3px solid #ffb703;
+  box-shadow: 0 0 15px #ffb703;
+}
+/* BUTTON CONTAINER */
+.person-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid #555;
+  padding: 10px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  border-color: #ffb703;
+  color: #ffb703;
+}
+
+/* NEXT BUTTON (PERSON SCREEN) */
+.person-actions .next-btn {
+  background: #ffb703;
+  color: black;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  opacity: 0.4;
+  cursor: not-allowed;
+  transition: 0.3s;
+}
+
+/* ACTIVE */
+.person-actions .next-btn.active {
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: 0 0 12px #ffb703;
+}
+/* ✅ ACTIVE (IMPORTANT) */
+.cat-card.active {
+  border: 2px solid #ffb400;
+  background: #1a1a1a;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 180, 0, 0.6);
+}
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.person img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hidden {
+  display: none;
+}
+/* NAVBAR FIXED */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #000;
+}
+
+/* LOGO */
+.logo-container img {
+  height: 45px;
+}
+
+/* SEARCH CENTER */
+.search-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+#searchInput {
+  width: 300px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+/* NAV LINKS */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin-left: 25px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #ffb703;
+}
+
+.logo-container img {
+  height: 50px;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffb703;
+}
+/* SEARCH BOX WITH ICON */
+.search-box {
+  position: relative;
+  width: 300px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 40px 10px 15px; /* space for icon */
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #555;
+}
+/* HERO SECTION */
+.hero {
+  height: 85vh;
+  background: url('assets/images/hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #ccc;
+}
+
+.hero button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #ffb703;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+}
+.hero::after {
+  background: rgba(0,0,0,0.6);
+}
+/* GENERAL SECTIONS */
+section {
+  padding: 60px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* CARDS (Trending + Team) */
+.cards {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 220px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: top; /* IMPORTANT FIX */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card h3 {
+  margin: 12px;
+  font-size: 16px;
+}
+
+.card p {
+  margin: 0 12px 15px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* MOOD SECTION */
+/* MOOD GRID */
+.mood-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* MOOD BUTTONS */
+.mood-grid button {
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: 1px solid #333;
+  background: transparent;
+  color: #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.mood-grid button:hover {
+  background: #ffb703;
+  color: black;
+  border-color: #ffb703;
+}
+
+/* GAME SECTION */
+.game {
+  text-align: center;
+}
+
+.game p {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.game-btn {
+  background: #ffb703;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.game-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ABOUT PAGE */
+.about {
+  padding: 60px;
+  text-align: center;
+}
+
+.about h1, .about h2 {
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 600px;
+  margin: auto;
+  color: #ccc;
+}
+/* SECTION WRAPPER */
+.mood-section {
+  padding: 60px 80px;
+}
+
+/* HEADING FIX */
+.section-title {
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* CENTER ALIGN GRID */
+.mood-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center; /* 🔥 THIS FIXES LEFT ISSUE */
+}
+
+/* BUTTON STYLE */
+.mood-grid button {
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: 1px solid #333;
+  background: transparent;
+  color: #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* AUTH BUTTONS */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.auth-buttons button {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #333;
+  background: transparent;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.auth-buttons button:hover {
+  background: #ffb703;
+  color: black;
+}
+/* HOVER */
+.mood-grid button:hover {
+  background: #ffb703;
+  color: black;
+}
+/* TEAM SECTION */
+.team {
+  padding: 60px;
+}
+
+.team h2 {
+  margin-bottom: 30px;
+}
+
+.team .card {
+  width: 250px;
+}
+
+.team img {
+  height: 200px;
+  object-fit: cover;
+}
+.next-container {
+  display: flex;
+  justify-content: center;
+}
+
+.person-actions {
+  display: none;
+  justify-content: center;
+  gap: 20px;
+}
+#options button {
+  display: block;
+  margin: 12px auto;
+  padding: 14px;
+  width: 260px;
+  border-radius: 30px;
+  border: none;
+  background: #1a1a1a;
+  color: white;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+#options button:hover {
+  transform: scale(1.05);
+  background: #ffb703;
+  color: black;
+}
+
+/* RESULT SCREEN */
+.result-card {
+  background: #111;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 25px #ffb703;
+}
+
+.result-card h2 {
+  margin-bottom: 20px;
+}
+
+.result-card button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  background: #ffb703;
+  cursor: pointer;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#quizPersonImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#timer {
+  font-size: 14px;
+  color: #ffb703;
+}
+
+/* LOGIN POPUP */
+.login-popup {
+  display: none;   /* 🔥 FIX */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.login-box {
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.google-btn {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: #4285F4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.guest-btn {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  background: #ffb703;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* GAME PAGE */
+.game-section {
+  text-align: center;
+  padding: 60px;
+}
+
+.options {
+  margin-top: 30px;
+}
+
+.options button {
+  display: block;
+  margin: 10px auto;
+  padding: 12px 20px;
+  width: 250px;
+  border: none;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.options button:hover {
+  background: #ffb703;
+  color: black;
+}
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #1a1a1a;
+  color: white;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #ffb703;
+  color: black;
+}
+
+/* TAB CONTENT */
+.tab-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* VIEW MORE */
+/* VIEW MORE FIXED CENTER */
+.view-more {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  color: #ffb703;
+  font-weight: 500;
+  cursor: pointer;
+}
+/* REELS PAGE */
+.reels-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.reel {
+  position: relative;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.reel video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reel-info {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+}
+
+.reel-info h3 {
+  font-size: 20px;
+}
+
+.reel-info p {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.reel-info button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #ffb703;
+  cursor: pointer;
+}
+/* NAV RIGHT */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* SEARCH BAR */
+#searchInput {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  margin-right: 20px;
+  outline: none;
+}
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #000;
+  color: #777;
+  font-size: 14px;
+}
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0b0b0b;
+  color: #ffffff;
+}
+.game p {
+  margin-bottom: 20px;
+}
+
+#playBtn {
+  margin-bottom: 25px;
+}
+ .category {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.person-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.person {
+  text-align: center;
+  cursor: pointer;
+}
+
+.person img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.person p {
+  margin-top: 5px;
+}
+
+#options button {
+  display: block;
+  margin: 10px auto;
+  width: 250px;
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.cat-card {
+  text-align: center;
+  cursor: pointer;
+}
+
+.cat-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.person-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  justify-items: center;
+}
+
+.person-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.person img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hidden {
+  display: none;
+}
+/* NAVBAR FIXED */  
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+.navbar nav {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex: 1;   /* 🔥 pushes to center */
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.logo-container img {
+  height: 60px;   /* 🔥 increased */
+  cursor: pointer;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.search-box input {
+  width: 400px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+
+/* SEARCH CENTER */
+.search-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+/* MENU ICON */
+.menu-icon {
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+  margin-left: 20px;
+}
+
+/* SIDE MENU */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* hidden initially */
+  width: 250px;
+  height: 100%;
+  background: #111;
+  padding: 20px;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+/* ACTIVE MENU */
+.side-menu.active {
+  right: 0;
+}
+
+/* MENU LINKS */
+.side-menu a {
+  display: block;
+  color: white;
+  padding: 12px 0;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  font-size: 22px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+#searchInput {
+  width: 300px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+/* NAV LINKS */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin-left: 25px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #ffb703;
+}
+
+.logo-container img {
+  height: 50px;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffb703;
+}
+/* SEARCH BOX WITH ICON */
+.search-box {
+  position: relative;
+  width: 300px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 40px 10px 15px; /* space for icon */
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #555;
+}
+/* HERO SECTION */
+.hero {
+  height: 85vh;
+  background: url('assets/images/hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #ccc;
+}
+
+.hero button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #ffb703;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+}
+.hero::after {
+  background: rgba(0,0,0,0.6);
+}
+/* GENERAL SECTIONS */
+section {
+  padding: 60px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* CARDS (Trending + Team) */
+.cards {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 220px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: top; /* IMPORTANT FIX */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card h3 {
+  margin: 12px;
+  font-size: 16px;
+}
+
+.card p {
+  margin: 0 12px 15px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* MOOD SECTION */
+/* MOOD GRID */
+.mood-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* MOOD BUTTONS */
+.mood-grid button {
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: 1px solid #333;
+  background: transparent;
+  color: #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.mood-grid button:hover {
+  background: #ffb703;
+  color: black;
+  border-color: #ffb703;
+}
+
+/* GAME SECTION */
+.game {
+  text-align: center;
+}
+
+.game p {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.game-btn {
+  background: #ffb703;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.game-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ABOUT PAGE */
+.about {
+  padding: 60px;
+  text-align: center;
+}
+
+.about h1, .about h2 {
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 600px;
+  margin: auto;
+  color: #ccc;
+}
+/* SECTION WRAPPER */
+.mood-section {
+  padding: 60px 80px;
+}
+
+/* HEADING FIX */
+.section-title {
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* CENTER ALIGN GRID */
+.mood-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center; /* 🔥 THIS FIXES LEFT ISSUE */
+}
+
+/* BUTTON STYLE */
+.mood-grid button {
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: 1px solid #333;
+  background: transparent;
+  color: #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* AUTH BUTTONS */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.auth-buttons button {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #333;
+  background: transparent;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.auth-buttons button:hover {
+  background: #ffb703;
+  color: black;
+}
+/* HOVER */
+.mood-grid button:hover {
+  background: #ffb703;
+  color: black;
+}
+/* TEAM SECTION */
+.team {
+  padding: 60px;
+}
+
+.team h2 {
+  margin-bottom: 30px;
+}
+
+.team .card {
+  width: 250px;
+}
+
+.team img {
+  height: 200px;
+  object-fit: cover;
+}
+
+
+
+.login-box {
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.google-btn {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: #4285F4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.guest-btn {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  background: #ffb703;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* GAME PAGE */
+.game-section {
+  text-align: center;
+  padding: 60px;
+}
+
+.options {
+  margin-top: 30px;
+}
+
+.options button {
+  display: block;
+  margin: 10px auto;
+  padding: 12px 20px;
+  width: 250px;
+  border: none;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.options button:hover {
+  background: #ffb703;
+  color: black;
+}
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #1a1a1a;
+  color: white;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #ffb703;
+  color: black;
+}
+
+#playerSection {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#ytPlayer {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 15px;
+}
+
+
+.close-btn {
+  font-size: 24px;        /* smaller size */
+  color: white;           /* white cross */
+  cursor: pointer;
+  text-align: right;
+  margin-bottom: 20px;
+
+  background: none;       /* ❌ remove red circle */
+  border: none;           /* no border */
+}
+
+.player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 400px;
+  height: 225px;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.player iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.close-player {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 18px;
+}
+
+.game-buttons {
+  display: flex;
+  justify-content: center;   /* center both */
+  gap: 20px;                 /* space between buttons */
+  margin-top: 20px;
+}
+
+/* Start Playing button */
+.start-btn {
+  background: #ffb400;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tournament-btn {
+  background: #ffb400;   /* same as Start */
+  color: black;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* 👇 shift slightly left */
+.game-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 35px;              /* 🔥 increased spacing */
+  margin-top: 20px;
+  transform: translateX(-20px);
+}
+
+.hero-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.hero-card {
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid gold;
+}
+
+.vs-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: gold;
+}
+
+#tOptions button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+}
+
+#tournamentSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tournament-container {
+  text-align: center;
+  width: 100%;
+}
+
+.hero-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+#tournamentQuiz {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.question-box {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.option-btn {
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  font-size: 16px;
+}
+
+.option-btn.correct {
+  background: green;
+  color: white;
+}
+
+.option-btn.wrong {
+  background: red;
+  color: white;
+}
+
+#tournamentSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 🔥 center horizontally */
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* 🔥 center hero cards */
+  gap: 60px;                /* space between */
+  margin-top: 40px;
+}
+
+.hero-card {
+  text-align: center;
+}
+
+.vs-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffd700;
+}
+#tournamentSection h2 {
+  text-align: center;
+  width: 100%;
+}
+
+/* TAB CONTENT */
+.tab-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.hidden {
+  display: none;
+}
+
+.filter-buttons {
+  position: relative;
+  z-index: 5; /* 🔥 bring buttons to front */
+}
+
+.filter-buttons button {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+#confetti, canvas {
+  pointer-events: none; /* 🔥 prevents blocking clicks */
+}
+
+button {
+  position: relative;
+  z-index: 10;
+}
+
+.filter-buttons button:hover {
+  transform: scale(1.05);
+}
+
+/* VIEW MORE */
+.mood-btn.active-mood {
+  background: gold;
+  color: black;
+  transform: scale(1.05);
+}
+
+.mood-actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.mood-actions button {
+  margin: 10px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#moodActions button:disabled,
+.mood-actions button:disabled {
+  opacity: 1; /* keep text visible */
+  cursor: not-allowed;
+  background: #333;
+  color: #aaa; /* visible text */
+  border: 1px solid #555;
+}
+
+.mood-actions button {
+  background: #111;
+  color: white;
+  border: 1px solid gold;
+}
+/* VIEW MORE FIXED CENTER */
+.view-more {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  color: #ffb703;
+  font-weight: 500;
+  cursor: pointer;
+}
+/* REELS PAGE */
+.reels-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.reel {
+  position: relative;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.reel video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reel-info {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+}
+
+.reel-info h3 {
+  font-size: 20px;
+}
+
+.reel-info p {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.reel-info button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #ffb703;
+  cursor: pointer;
+}
+/* NAV RIGHT */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* SEARCH BAR */
+#searchInput {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  margin-right: 20px;
+  outline: none;
+}
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #000;
+  color: #777;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .cards {
+    justify-content: center;
+  }
+}
+#playBtn {
+  margin-top: 12px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+#personImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid gold;
+}
+#options button {
+  display: block;
+  width: 320px;
+  margin: 12px auto;
+  padding: 14px;
+  border-radius: 25px;
+  border: none;
+  background: #1f1f1f;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#options button:hover {
+  background: gold;
+  color: black;
+}
+.quiz-controls {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.quiz-controls button {
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  background: gold;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+.result-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.hidden {
+  display: none;
+}
+
+.result-card {
+  text-align: center;
+  color: white;
+  background: #111;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px gold;
+}
+
+.result-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid gold;
+  margin-bottom: 10px;
+}
+
+.restart-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: gold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.result-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0,0,0,0.95);
+  z-index: 999;
+
+  overflow: hidden; /* important */
+}
+
+#confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.result-content {
+  position: relative;
+  z-index: 2; /* above confetti */
+
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+
+  text-align: center;
+  background: #111;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px gold;
+}
+#confetti {
+  pointer-events: none; /* 🔥 THIS FIXES CLICK ISSUE */
+}
+#resultImg {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid gold;
+}
+
+.home-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ffd700;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.home-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.home-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ffd700;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.3s;
+
+  position: relative;
+  z-index: 2; /* 🔥 VERY IMPORTANT */
+}
+
+.home-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .cards {
+    justify-content: center;
+  }
+}
