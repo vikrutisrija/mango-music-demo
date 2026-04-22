@@ -143,47 +143,47 @@ function selectCategory(type, element) {
 const data = {
 
   singer: [
-    { name: "Sunitha", img: "assets/images/sunitha.jpg" },
-    { name: "SP Balasubramanyam", img: "assets/images/spb.jpg" },
-    { name: "Keeravani", img: "assets/images/keeravani.jpg" },
-    { name: "Geetha Madhuri", img: "assets/images/Geetha Madhuri.jpg" },
-    { name: "Sid Sriram", img: "assets/images/Sid Sriram.jpg" },
-    { name: "Anurag Kulkarni", img: "assets/images/Anurag Kulkarni.jpg" },
-    { name: "Shreya Ghoshal", img: "assets/images/Shreya Ghoshal.jpg" }
+    { name: "Sunitha", img: "sunitha.jpg" },
+    { name: "SP Balasubramanyam", img: "spb.jpg" },
+    { name: "Keeravani", img: "keeravani.jpg" },
+    { name: "Geetha Madhuri", img: "Geetha Madhuri.jpg" },
+    { name: "Sid Sriram", img: "Sid Sriram.jpg" },
+    { name: "Anurag Kulkarni", img: "Anurag Kulkarni.jpg" },
+    { name: "Shreya Ghoshal", img: "Shreya Ghoshal.jpg" }
   ],
 
   heroes: [
-    { name: "Allu Arjun", img: "assets/images/hero1.jpg" },
-    { name: "Mahesh Babu", img: "assets/images/hero2.jpg" },
-    { name: "Ram Charan", img: "assets/images/hero3.jpg" },
-    { name: "Prabhas", img: "assets/images/Prabhas.jpg" },
-    { name: "Jr. NTR", img: "assets/images/Jr. NTR.jpg" },
-    { name: "Nani", img: "assets/images/Nani.jpg" },
-    { name: "Pawan Kalyan", img: "assets/images/Pawan Kalyan.jpg" }
+    { name: "Allu Arjun", img: "hero1.jpg" },
+    { name: "Mahesh Babu", img: "hero2.jpg" },
+    { name: "Ram Charan", img: "hero3.jpg" },
+    { name: "Prabhas", img: "Prabhas.jpg" },
+    { name: "Jr. NTR", img: "Jr. NTR.jpg" },
+    { name: "Nani", img: "Nani.jpg" },
+    { name: "Pawan Kalyan", img: "Pawan Kalyan.jpg" }
   ],
 
   actress: [
-    { name: "Samantha", img: "assets/images/Samantha.jpg" },
-    { name: "Rashmika", img: "assets/images/Rashmika.jpg" },
-    { name: "Sai Pallavi", img: "assets/images/Sai Pallavi.jpg" },
-    { name: "Anushka Shetty", img: "assets/images/Anushka Shetty.jpg" },
-    { name: "Sreeleela", img: "assets/images/Sreeleela.jpg" },
-    { name: "Mrunal Thakur", img: "assets/images/Mrunal Thakur.jpg" },
+    { name: "Samantha", img: "Samantha.jpg" },
+    { name: "Rashmika", img: "Rashmika.jpg" },
+    { name: "Sai Pallavi", img: "Sai Pallavi.jpg" },
+    { name: "Anushka Shetty", img: "Anushka Shetty.jpg" },
+    { name: "Sreeleela", img: "Sreeleela.jpg" },
+    { name: "Mrunal Thakur", img: "Mrunal Thakur.jpg" },
   ],
 
   composer: [
-    { name: "DSP", img: "assets/images/dsp.jpg" },
-    { name: "Thaman", img: "assets/images/thaman.jpg" }
+    { name: "DSP", img: "dsp.jpg" },
+    { name: "Thaman", img: "thaman.jpg" }
   ],
 
   lyricist: [
-    { name: "Sirivennela", img: "assets/images/Sirivennela.jpg" },
-    { name: "Chandrabose", img: "assets/images/Chandrabose.jpg" }
+    { name: "Sirivennela", img: "Sirivennela.jpg" },
+    { name: "Chandrabose", img: "Chandrabose.jpg" }
   ],
 
   album: [
-    { name: "Pushpa", img: "assets/images/Pushpa.jpg" },
-    { name: "RRR", img: "assets/images/RRR.jpg" }
+    { name: "Pushpa", img: "Pushpa.jpg" },
+    { name: "RRR", img: "RRR.jpg" }
   ]
 
 };
